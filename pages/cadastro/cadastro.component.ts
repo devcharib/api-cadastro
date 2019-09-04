@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient  } from '@angular/common/http/';
+import { ProdutoService } from '..pages/produto.service.ts';
 
 @Component({
   selector: 'app-cadastro',
@@ -12,19 +13,17 @@ export class CadastroComponent implements OnInit {
   preco : string;
   qtd : string;
 
-  constructor(public http : HttpClient)  { }
+  constructor(public http : HttpClient, public ProdutoService : ProdutoService)  { }
 
   ngOnInit() {
   }
 
   cadastrar() {
-    this.http.post(
-      'https://produtosapi.run.goorm.io/produtos',{nome : this.nome,
-      preco : this.preco,
-      qtd : this.qtd}
-    )
-    .subscribe( data=> console.log(data),
+    var  prod = { nome : this.nome, preco : this.preco, qtd : this.preco};
+    this.produtoService.obterProdutos()
+    .subscribe(
+    resposta => console.log(resposta),
       erro=> console.log(erro));
-    
+  
   }
 }

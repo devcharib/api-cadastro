@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ProdutoService } from '..pages/produto.service.ts';
 
-import { HttpClient  } from '@angular/common/http/';
 import { CadastroComponent } from '../cadastro/cadastro.component';
 @Component({
   selector: 'page-home',
@@ -11,9 +11,9 @@ export class HomePage {
 
   produtos : Object[];
 
-  constructor(public navCtrl: NavController, public http : HttpClient) {
+  constructor(public navCtrl: NavController, public produtoService : ProdutoService) {
 
-      this.http.get<Object[]>('https://produtosapi.run.goorm.io/produtos')
+      this.produtoService.obterProdutos()
       .subscribe( data => {
                           this.produtos = data;
                           console.log(this.produtos)

@@ -4,7 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpClientModule  } from '@angular/common/http';
 import { CadastroComponent } from '../pages/cadastro/cadastro.component';
-import { ProdutoService } from '..pages/produto.service.ts';
+import { ProdutoService } from '../pages/produto.service';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';

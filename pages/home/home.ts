@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ProdutoService } from '..pages/produto.service.ts';
+import { ProdutoService } from '../produto.service';
 
 import { CadastroComponent } from '../cadastro/cadastro.component';
 @Component({

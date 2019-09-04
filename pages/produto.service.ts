@@ -17,7 +17,7 @@ export class ProdutoService {
 
   cadastrarProduto(produto){
 
-      this.http.post(
+     return this.http.post(
       this.url,produto
     )
   }

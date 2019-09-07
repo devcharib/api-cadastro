@@ -20,7 +20,7 @@ export class CadastroComponent implements OnInit {
 
   cadastrar() {
     var  prod = { nome : this.nome, preco : this.preco, qtd : this.preco};
-    this.produtoService.cadastrarProduto(prod)
+    this.rodutoService.cadastrarProduto(prod)
     .subscribe(
     resposta => console.log(resposta),
       erro=> console.log(erro));

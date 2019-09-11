@@ -5,18 +5,21 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>LISTA DE PRODUTOS</h2>
+  <h2>Lista de Açudes</h2>
  
   <ion-list>
-  <ion-item *ngFor="let p of produtos" (click)="seleciona(a)">
+  <ion-item *ngFor="let p of acude" (click)="seleciona(a)">
     <h1>Nome: {{p.nome}}</h1>
-    <h6>Preço: {{p.preco}}</h6>
-    <h4>Quantidade: {{p.qtd}}</h4>
+    <h6>Municipio: {{p.municipio}}</h6>
+    <h6>Nome Oficial: {{p.nomeOficial}}</h6>
+    <h6>Capacidade: {{p.capacidade}}</h6>
+    <h6>Volume atual: {{p.volumeAtual}}</h6>
+    <h6>Ano de construção: {{p.anoDeConstrucao}}</h6>
+
+    
   </ion-item>
 </ion-list>
 
- <ion-item>
-    <button ion-button (click)="cadastrar()">Cadastrar</button> 
-  </ion-item>
+ 
 
 </ion-content>

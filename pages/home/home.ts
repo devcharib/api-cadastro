@@ -25,5 +25,8 @@ export class HomePage {
       
 
   }
-    
+    seleciona( x ){
+    console.log(x);
+    this.navCtrl.push(DetalheComponent, {acudes : x});
+  }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { AcudeService } from '../acude.service';
+import { AcudeService } from './pages/acude.service';
 import { DetalheComponent} from '../detalhe/detalhe.component';
 import { HttpClient } from '@angular/common/http';
 
@@ -16,7 +16,7 @@ export class HomePage {
 
       this.acudeService.obterProdutos()
       .subscribe( data => {
-                          this.acudes = data.acudes;
+                          this.acudes = data;
                           console.log(this.acudes)
       },
       erro=> console.log(erro)

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { AcudeService } from './pages/acude.service';
+import { AcudeService } from '../acude.service';
 import { DetalheComponent} from '../detalhe/detalhe.component';
 import { HttpClient } from '@angular/common/http';
 

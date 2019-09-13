@@ -5,7 +5,7 @@ import { MyApp } from './app.component';
 import { HttpClientModule  } from '@angular/common/http';
 import { DetalheComponent } from '../pages/detalhe/detalhe.component';
 
-import { AcudeService } from '../acude.service';
+import { AcudeService } from '../pages/acude.service';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';

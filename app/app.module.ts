@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpClientModule  } from '@angular/common/http';
-import { DetalheComponent } from '..pages/detalhe/detalhe.component';
+import { DetalheComponent } from '../pages/detalhe/detalhe.component';
 import { AcudeService } from '../pages/acude.service';
 
 import { AboutPage } from '../pages/about/about';

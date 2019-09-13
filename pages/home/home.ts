@@ -12,7 +12,7 @@ export class HomePage {
 
   acudes : Object[];
 
-  constructor(public navCtrl: NavController, public http : HttpClient, public navParams : NavParams) {
+  constructor(public navCtrl: NavController, public http : HttpClient, public navParams : NavParams, public acudeService : AcudeService) {
 
       this.acudeService.obterProdutos()
       .subscribe( data => {

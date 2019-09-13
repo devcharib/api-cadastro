@@ -16,7 +16,7 @@ export class HomePage {
 
       this.acudeService.obterProdutos()
       .subscribe( data => {
-                          this.acudes = data;
+                          this.acudes = data.acudes;
                           console.log(this.acudes)
       },
       erro=> console.log(erro)

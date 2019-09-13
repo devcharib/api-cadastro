@@ -36,7 +36,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler}, 
-    ProdutoService
+    AcudeService
   ]
 })
 export class AppModule {}

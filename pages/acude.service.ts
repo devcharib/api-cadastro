@@ -3,11 +3,11 @@ import { HttpClient  } from '@angular/common/http/';
 
 
 @Injectable()
-export class ProdutoService {
+export class AcudeService {
 
   constructor( public http : HttpClient) { }
 
-  url : string = 'https://produtosapi.run.goorm.io/produtos';
+  url : string = 'https://demo3276064.mockable.io/acudes';
 
   obterProdutos(){
       return this.http.get<Object[]>(this.url);
@@ -15,10 +15,4 @@ export class ProdutoService {
 
 }
 
-  cadastrarProduto(produto){
-
-     return this.http.post(
-      this.url,produto
-    )
-  }
 }

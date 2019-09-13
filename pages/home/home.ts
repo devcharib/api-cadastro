@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { ProdutoService } from '../produto.service';
+import { NavController, NavParams } from 'ionic-angular';
+import { AcudeService } from '../acude.service';
 import { DetalheComponent} from '../detalhe/detalhe.component';
 import { HttpClient } from '@angular/common/http';
-import { CadastroComponent } from '../cadastro/cadastro.component';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -12,12 +12,12 @@ export class HomePage {
 
   acudes : Object[];
 
-  constructor(public navCtrl: NavController, public http : HttpClient) {
+  constructor(public navCtrl: NavController, public http : HttpClient, public navParams : NavParams) {
 
-      this.produtoService.obterProdutos()
+      this.acudeService.obterProdutos()
       .subscribe( data => {
-                          this.produtos = data;
-                          console.log(this.produtos)
+                          this.acudes = data.acudes;
+                          console.log(this.acudes)
       },
       erro=> console.log(erro)
       );
@@ -25,8 +25,5 @@ export class HomePage {
       
 
   }
-    cadastrar(){
-        this.navCtrl.push(CadastroComponent);
-
-}
+    
 }

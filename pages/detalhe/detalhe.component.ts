@@ -8,9 +8,9 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class DetalheComponent implements OnInit {
 
-
+  acudes;
   constructor(public navCtrl: NavController, public navParams : NavParams) { 
-
+      this.acudes = this.navParams.get('acudes');
   }
 
   ngOnInit() {
